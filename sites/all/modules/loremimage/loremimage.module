@@ -38,7 +38,7 @@ function loremimage_form() {
     $form['category']=array(
         '#type'=>'select',
         '#title'=>t('Category'),
-        '#options'=>array('Abstract', 'City', 'People', 'Transport', 'Animals', 'Food', 'Nature', 'Business', 'Cats', 'Fashion', 'Technics')
+        '#options'=>array('None', 'Abstract', 'City', 'People', 'Transport', 'Animals', 'Food', 'Nature', 'Business', 'Cats', 'Fashion', 'Technics')
       );
 	 
      $form['color']=array(
@@ -49,7 +49,7 @@ function loremimage_form() {
 		t('Greyscale'))
       );
 
-     $form['email']=array(
+     $form['dummytext']=array(
         '#type'=>'textarea',
         '#title'=>t('DummyText'),
 	   '#cols' => 60,
