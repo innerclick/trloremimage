@@ -1,9 +1,12 @@
+
+
 <?php
 /**
  * @file
  * This is the main module file.
  */
 
+drupal_add_js(drupal_get_path('module', 'loremimage') . '/loremimage.js');
 
 /**
 * Implementation of hook_menu().
@@ -18,15 +21,15 @@ function loremimage_menu() {
   return $items;
 }
 
-function loremimage_form1() {
+function loremimage_form() {
     $form = array();
 
 
-    $form['name']=array(
+    $form['xwidth']=array(
         '#type'=>'textfield',
         '#title'=>t('The Image\'s X dimensions (width):')
       );
-    $form['last_name']=array(
+    $form['yheight']=array(
         '#type'=>'textfield',
         '#title'=>t('The Image\'s Y dimensions (height)')
       );
@@ -57,7 +60,9 @@ function loremimage_form1() {
 
     $form['submit']=array(
         '#type'=>'submit',
-        '#value'=>t('Submit')
+        '#value'=>t('Submit'),
+	   '#attributes' => array(
+    	   'onclick' => "sendToLoremImage(); return false;")
       );
 
       return $form;
