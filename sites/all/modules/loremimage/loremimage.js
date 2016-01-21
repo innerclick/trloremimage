@@ -28,15 +28,6 @@ function sendToLoremImage() {
     else {
 	    category = categories[category];
     }
-    if ((incolor != '0') && (incolor != '1')){
-        var responses = responses + "Please choose color or greyscale\n";
-    }
-    else if (incolor == '0') {
-        color = "color";
-    }
-    else if (incolor == '1') {
-        color = "greyscale";
-    }
     if (dummytext == null || dummytext == "") {
         var responses = responses + "Dummy Text must be entered";
     }
@@ -46,7 +37,6 @@ function sendToLoremImage() {
     }
     else
     {
-	    console.log(category);
 	    alert(responses);
 	    return false;
     }
